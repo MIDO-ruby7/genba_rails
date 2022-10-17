@@ -22,7 +22,6 @@ class TasksController < ApplicationController
   end
 
   def create
-<<<<<<< HEAD
     @task = Task.new(task_params)
     
     if @task.save
@@ -30,11 +29,11 @@ class TasksController < ApplicationController
     else
       render :new
     end
-=======
+
     task = Task.new(task_params) 
     task.save!
     redirect_to tasks_url, notice: "タスク「#{task.name}」を登録しました"
->>>>>>> cdd0ddceff0e22c9c5a1127c5291a7ebd0b87e53
+
   end
   
   def destroy
